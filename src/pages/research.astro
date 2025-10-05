@@ -15,7 +15,7 @@ import researchImage3 from "../assets/research_3.jpg";
           <h2>Research 1</h2>
           <div class="research">
             <div class="imageContainer">
-              <Image src={researchImage1} height={200} alt="AERS Laboratory image" />
+              <Image src={researchImage1} alt="AERS Laboratory image" />
             </div>
             <p class="paragraph">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -39,7 +39,7 @@ import researchImage3 from "../assets/research_3.jpg";
               laborum.
             </p>
             <div class="imageContainer">
-              <Image src={researchImage2} height={200} alt="AERS Laboratory image" />
+              <Image src={researchImage2} alt="AERS Laboratory image" />
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@ import researchImage3 from "../assets/research_3.jpg";
           <h2>Research 3</h2>
           <div class="research">
             <div class="imageContainer">
-              <Image src={researchImage3} height={200} alt="AERS Laboratory image" />
+              <Image src={researchImage3} alt="AERS Laboratory image" />
             </div>
             <p class="paragraph">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -109,8 +109,13 @@ import researchImage3 from "../assets/research_3.jpg";
     justify-content: center;
   }
 
+  @media (max-width: 768px) {
+    .research {
+      flex-direction: column;
+    }
+  }
+
   .paragraph {
-    max-height: 200px;
     overflow-y: auto;
   }
 </style>
