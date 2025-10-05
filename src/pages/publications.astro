@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+import data from "../data/publications.json";
+---
+
+<Layout title="Publications">
+  <div class="body">
+    <div class="container">
+      <div class="innerContainer">
+        <h1>Publications</h1>
+        {
+          data.map((publication) => (
+            <div>
+              <div>{publication.name}</div>
+              <div class="authors">{publication.authors.join(", ")}</div>
+              <div>
+                [<a href={publication.link} target="_blank">link</a>]
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .body {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  a {
+    color: blue;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .container {
+    align-items: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: safe center;
+    padding: 1em;
+    width: 100%;
+  }
+
+  .innerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 960px;
+  }
+
+  .authors {
+    font-style: italic;
+  }
+</style>

@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Publication name 1",
+    "authors": ["author1", "author2", "author3"],
+    "link": "https://google.com"
+  },
+  {
+    "name": "Publication name 2",
+    "authors": ["author1", "author2", "author3"],
+    "link": "https://google.com"
+  },
+  {
+    "name": "Publication name 3",
+    "authors": ["author1", "author2", "author3"],
+    "link": "https://google.com"
+  },
+  {
+    "name": "Publication name 4",
+    "authors": ["author1", "author2", "author3"],
+    "link": "https://google.com"
+  },
+  {
+    "name": "Publication name 5",
+    "authors": ["author1", "author2", "author3"],
+    "link": "https://google.com"
+  }
+]

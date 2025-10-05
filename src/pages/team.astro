@@ -1,0 +1,107 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Profile from "../components/Profile.astro";
+import data from "../data/team.json";
+---
+
+<Layout title="Team">
+  <div class="body">
+    <div class="container">
+      <div class="innerContainer">
+        <h1>Team</h1>
+        {
+          data.staff.length ? (
+            <>
+              <h2>Staff</h2>
+              <div class="gridContainer">
+                {data.staff.map((item) => (
+                  <Profile
+                    name={item.name}
+                    tag={item.tag}
+                    email={item.email}
+                    website={item.website}
+                    profile={item.profile}
+                  />
+                ))}
+              </div>
+            </>
+          ) : null
+        }
+        {
+          data.graduate.length ? (
+            <>
+              <h2>Graduate Students</h2>
+              <div class="gridContainer">
+                {data.graduate.map((item) => (
+                  <Profile
+                    name={item.name}
+                    tag={item.tag}
+                    email={item.email}
+                    website={item.website}
+                    profile={item.profile}
+                  />
+                ))}
+              </div>
+            </>
+          ) : null
+        }
+        {
+          data.undergraduate.length ? (
+            <>
+              <h2>Undergraduate Students</h2>
+              <div class="gridContainer">
+                {data.undergraduate.map((item) => (
+                  <Profile
+                    name={item.name}
+                    tag={item.tag}
+                    email={item.email}
+                    website={item.website}
+                    profile={item.profile}
+                  />
+                ))}
+              </div>
+            </>
+          ) : null
+        }
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .body {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  a {
+    color: blue;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .container {
+    align-items: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: safe center;
+    padding: 1em;
+    width: 100%;
+  }
+
+  .innerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 960px;
+  }
+
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+</style>

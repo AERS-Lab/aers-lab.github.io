@@ -1,0 +1,64 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  name: string;
+  tag: string | null;
+  email: string;
+  website: string | null;
+  profile: string | null;
+}
+
+const { name, tag, email, website, profile } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.jpg");
+const imageFunc = images[`/src/assets/${profile}`] ?? images["/src/assets/no_profile.jpg"];
+---
+
+<div class="gridItem">
+  <div class="imageContainer">
+    <Image src={imageFunc()} height={250} alt={`${name} profile picture`} />
+  </div>
+  <div class="name">{name}</div>
+  {tag ? <div>{tag}</div> : null}
+  <div>Email: {email}</div>
+  {
+    website ? (
+      <div>
+        Website:
+        <a href={website} target="_blank">
+          {website}
+        </a>
+      </div>
+    ) : null
+  }
+</div>
+
+<style>
+  a {
+    color: blue;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .gridItem {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .imageContainer {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .name {
+    font-size: 20px;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+  }
+</style>

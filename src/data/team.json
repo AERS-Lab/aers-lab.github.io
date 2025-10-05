@@ -1,0 +1,57 @@
+{
+  "staff": [
+    {
+      "name": "Professor 1",
+      "tag": "Associate Professor",
+      "email": "professor1@gmail.com",
+      "website": "https://google.com",
+      "profile": "professor_1.jpg"
+    },
+    {
+      "name": "Postdoc 1",
+      "tag": "Postdoctoral Associate",
+      "email": "postdoc1@gmail.com",
+      "website": null,
+      "profile": null
+    },
+    {
+      "name": "Postdoc 2",
+      "tag": "Postdoctoral Associate",
+      "email": "postdoc2@gmail.com",
+      "website": null,
+      "profile": null
+    }
+  ],
+  "graduate": [
+    {
+      "name": "PhD 1",
+      "tag": "PhD Student",
+      "email": "phd1@gmail.com",
+      "website": null,
+      "profile": "phd_1.jpg"
+    },
+    {
+      "name": "MSc 1",
+      "tag": "MSc Student",
+      "email": "msc1@gmail.com",
+      "website": null,
+      "profile": "msc_1.jpg"
+    }
+  ],
+  "undergraduate": [
+    {
+      "name": "Bachelor 1",
+      "tag": null,
+      "email": "bachelor1@gmail.com",
+      "website": null,
+      "profile": null
+    },
+    {
+      "name": "Bachelor 2",
+      "tag": null,
+      "email": "bachelor2@gmail.com",
+      "website": null,
+      "profile": null
+    }
+  ]
+}
